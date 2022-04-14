@@ -7,8 +7,9 @@ jobs:
   test:
     docker:
     #  - image: danvk/yarn-python36:0.0.1 
+      - image: circleci/python:3.9-buster-node-browsers-legacy
       - image: cimg/node:17.9.0
-      # - image: circleci/python:3.9-buster-node-browsers-legacy
+    
     steps:
       - checkout
       - run: npm install
@@ -16,9 +17,10 @@ jobs:
       - run: npm run lint
   deploy:
     docker:
+     - image: circleci/python:3.9-buster-node-browsers-legacy
      - image: cimg/node:17.9.0
       # - image: circleci/node
-      # - image: circleci/python:3.9-buster-node-browsers-legacy
+     
     environment:
       AWS_REGION: eu-west-2
     steps:
