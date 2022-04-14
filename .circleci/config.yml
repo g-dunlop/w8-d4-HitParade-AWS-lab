@@ -6,8 +6,8 @@ orbs:
 jobs:
   test:
     docker:
-     - image: danvk/yarn-python36:0.0.1 
-      # - image: circleci/node
+    #  - image: danvk/yarn-python36:0.0.1 
+      - image: circleci/node
       # - image: circleci/python:3.9-buster-node-browsers-legacy
     steps:
       - checkout
