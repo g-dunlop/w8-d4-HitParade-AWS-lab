@@ -18,7 +18,7 @@ jobs:
     environment:
       AWS_REGION: eu-west-2
     steps:
-     - checkout
+      - checkout
       - run: npm install
       - run: npm run build
       - aws-s3/sync:
